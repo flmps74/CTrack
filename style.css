@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+aside {
+  width: 250px;
+  background: #1e1e2f;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 2rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.logo h2 {
+  font-size: 24px;
+}
+
+.logo .danger {
+  color: #f05454;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #ccc;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: #30304d;
+  color: white;
+}
+
+.sidebar a h3 {
+  font-size: 16px;
+}
+
+.material-symbols-outlined {
+  font-size: 24px;
+}
+
+
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.header h1 {
+  font-size: 28px;
+  margin-bottom: 1.5rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h3 {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .sidebar a {
+    flex: 1 1 45%;
+  }
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5f7fa;
+}
+
+.auth-container form {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-container h2 {
+  text-align: center;
+}
+
+.auth-container input {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.auth-container button {
+  background: #1e1e2f;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background: #30304d;
+}
+
