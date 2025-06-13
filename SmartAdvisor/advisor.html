@@ -53,10 +53,33 @@
         <div class="card">
             <label for="goal">Choose a goal:</label>
             <select id="goal">
-                <option value="" >Select a Prediction</option>
+                <option value="" disabled selected>Select a Prediction</option>
                 <option value="savings">Savings Account Growth</option>
                 <option value="investment">Investment Growth</option>
             </select>
         </div>
+
+        <form class="card" id="advisorForm" style="display:none;">
+          <label for="initial">Initial Amount ($)</label>
+            <input type="number" id="initial" required />
+          
+          <label for="monthly">Monthly Contribution ($)</label>
+            <input type="number" id="monthly" required />
+
+          <label for="rate">Annual Interest/Return Rate (%)</label>
+            <input type="number" id="rate" required />
+
+          <label for="years">Time Horizon (Years)</label>
+            <input type="number" id="years" required />
+          <button type="submit">Predict Growth</button>
+        </form>
+
+        <div class="card" id="output" style="display:none;">
+          <h3>Prediction Result</h3>
+          <p id="resultText"></p>
+        </div>
+        <script src="advisor.js"></script>
+      
+      </body>
 
     </main>
