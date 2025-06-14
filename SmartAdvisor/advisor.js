@@ -17,11 +17,11 @@ formSection.addEventListener("submit", (event) => {
     const years = parseFloat(document.getElementById("years").value);
     const timesPerYear = 12; 
 
-    alert(initialAmount);
-    alert(Math.pow((1 + annualRate/timesPerYear), years * timesPerYear ));
     const compoundPart = initialAmount * Math.pow(1 + annualRate/timesPerYear, timesPerYear * years);
-    alert(compoundPart);
-    
     const monthlyPart = monthlyAdd * ((Math.pow(1 + annualRate/timesPerYear, timesPerYear * years) - 1) / (annualRate/timesPerYear));
-    alert(monthlyPart);
+    const futureValue = compoundPart + monthlyPart;
+
+    resultText.innerText = `Estimated Future Value: $${futureValue.toFixed(2)}`;
+    outputBox.style.display = "block";
+
 })  
